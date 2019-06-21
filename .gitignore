@@ -11,7 +11,21 @@ local_settings.py
 db.sqlite3
 media
 
-./Python/Django/tutorial/Scripts/
+Python/Django/tutorial/Scripts/*
+Python/Django/tutorial/.idea/*
+pip-selfcheck.json
+pyvenv.cfg
+
+
+*/migrations
+*/*/migrations
+*/*/*/migrations
+*/*/*/*/migrations
+
+*/__pycache__
+*/*/__pycache__
+*/*/*/__pycache__
+
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
 # in your Git repository. Update and uncomment the following line accordingly.

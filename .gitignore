@@ -12,7 +12,8 @@ db.sqlite3
 media
 
 Python/Django/tutorial/Scripts/*
-Python/Django/tutorial/.idea/*
+Python/*/*/.idea/*
+Python/*/.idea/*
 pip-selfcheck.json
 pyvenv.cfg
 

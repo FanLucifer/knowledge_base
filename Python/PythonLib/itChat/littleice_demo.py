@@ -3,6 +3,7 @@ import itchat
 # 回复用userId
 userId = ''
 
+
 # 获取好友消息
 @itchat.msg_register([itchat.content.TEXT,itchat.content.PICTURE])
 def text_reply(msg):
@@ -11,6 +12,7 @@ def text_reply(msg):
     userId = msg['FromUserName']
     xbAnswer(msg)
     print(getUserNickName(msg) + "发来的消息:\n" + getText(msg))
+
 
 # 群信息
 @itchat.msg_register([itchat.content.TEXT,itchat.content.PICTURE], isGroupChat = True)
@@ -24,11 +26,13 @@ def group_reply(msg):
         userId = msg['FromUserName']
         xbAnswer(msg)
 
+
 # 群信息
 @itchat.msg_register(itchat.content.PICTURE, isGroupChat = True)
 def group_pic(msg):
     msg['Text'](msg['FileName'])
     itchat.send_image(msg['FileName'])
+
 
 # 公众号消息
 @itchat.msg_register([itchat.content.TEXT,itchat.content.PICTURE], isMpChat = True)
@@ -42,6 +46,7 @@ def map_reply(msg):
     else:
         itchat.send_msg(text, userId)
 
+
 # 获取昵称
 def getUserNickName(msg):
     fromUserName = msg['FromUserName']
@@ -49,12 +54,14 @@ def getUserNickName(msg):
     nickName = fromUser['NickName']
     return nickName
 
+
 # 获取文字
 def getText(msg):
     if msg['Type'] == 'Text':
         return msg['Text']
     else:
         return "发送的其他类型回复"
+
 
 # 向智能小冰提问
 def xbAnswer(msg):
@@ -66,5 +73,6 @@ def xbAnswer(msg):
     else:
         itchat.send_msg(quest, xb['UserName'])
 
-itchat.auto_login()
+
+itchat.auto_login(hotReload=True)
 itchat.run()

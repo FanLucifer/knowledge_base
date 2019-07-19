@@ -1,0 +1,17 @@
+
+%h1 Listing articles
+%a{:href => new_article_path} New article
+%table
+  %tr
+    %th Title
+    %th Text
+  %tr
+  -@articles.each do |article|
+    %td #{article.title}
+    %td #{article.text}
+    %td
+      %a{:href => article_path(article)} Show
+    %td
+      %a{:href => edit_article_path(article)} Edit
+    %td
+      %a{:href => article_path(article)} Destroy

@@ -1,0 +1,10 @@
+%tr
+    %td #{article.title}
+    %td #{article.text}
+    %td
+        %a{:href => article_path(article)} Show
+    %td
+        %a{:href => edit_article_path(article)} Edit
+    %td
+        %a{:href => article_path(article)} Destroy
+    

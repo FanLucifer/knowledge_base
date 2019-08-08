@@ -1,3 +1,6 @@
 %h2 Hello, Rails!
 
 %a{:href => "/articles"} Myblog
+
+= react_component("HelloWorld", { greeting: "Hello from react-rails.", info: { name: "react-rails" } }, { class: "hello-world" }) 
+= react_component("Post", {title: "Hello World"}) 

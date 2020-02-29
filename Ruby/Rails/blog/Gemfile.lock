@@ -125,7 +125,7 @@ GEM
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     public_suffix (3.1.1)
-    puma (3.12.1)
+    puma (3.12.3)
     rack (2.0.7)
     rack-proxy (0.6.5)
       rack
@@ -233,7 +233,7 @@ DEPENDENCIES
   duktape
   haml-rails
   jbuilder (~> 2.5)
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 5.2.3)
   react-rails
   ruby-debug-ide (~> 0.7.0)

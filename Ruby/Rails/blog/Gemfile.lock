@@ -116,7 +116,9 @@ GEM
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (0.9.2)
-    mimemagic (0.3.3)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
@@ -125,7 +127,8 @@ GEM
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     public_suffix (3.1.1)
-    puma (3.12.1)
+    puma (4.3.11)
+      nio4r (~> 2.0)
     rack (2.0.7)
     rack-proxy (0.6.5)
       rack
@@ -233,7 +236,7 @@ DEPENDENCIES
   duktape
   haml-rails
   jbuilder (~> 2.5)
-  puma (~> 3.11)
+  puma (~> 4.3)
   rails (~> 5.2.3)
   react-rails
   ruby-debug-ide (~> 0.7.0)
